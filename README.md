@@ -1,2 +1,2 @@
-homepage--------------------------------detailed post-----------------------------user profile
+homepage | detailed post | user profile
 ![](./screenshot.png)
