@@ -1,0 +1,422 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+/* nav----------------- */
+.nav {
+  background-color: rgba(224, 230, 227, 0.85);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.user-info {
+  width: auto;
+  margin-right: 20px;
+  color: rgb(53, 128, 87);
+}
+.nav-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+
+  height: 50px;
+
+  background-color: rgba(224, 230, 227, 0.85);
+  padding-left: 10px;
+}
+.text-link {
+  text-decoration: none;
+  color: rgb(104, 161, 130);
+  background-color: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+
+  transition: all 0.3s;
+}
+.text-link:hover {
+  color: white;
+  background-color: rgb(104, 161, 130);
+}
+.logout-btn {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  color: rgb(104, 161, 130);
+  background-color: rgba(0, 128, 0, 0);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+.logout-btn:hover {
+  color: white;
+  background-color: rgb(104, 161, 130);
+}
+
+/* home page----------------------- */
+.posts-ctn {
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.post {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 16px rgba(29, 66, 46, 0.355);
+  transition: all 0.5s;
+}
+.post:hover {
+  box-shadow: 0px 2px 16px rgba(29, 66, 46, 0);
+}
+.title {
+  width: 300px;
+  height: 40px;
+  background-color: rgb(104, 161, 130);
+  color: aliceblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.description {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(250, 247, 225);
+  text-align: start;
+  padding: 10px;
+
+  cursor: pointer;
+}
+.user {
+  width: 300px;
+  background-color: rgb(164, 195, 166);
+  color: rgb(82, 82, 82);
+  border: none;
+  text-align: end;
+  padding: 10px;
+}
+.like-section {
+  position: absolute;
+  right: 10px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.like-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.like-img {
+  width: 80%;
+}
+.clickable-name {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.clickable-name:hover {
+  text-decoration: underline;
+  color: rgb(77, 77, 77);
+}
+/* create post page & login page-------------------- */
+
+.formik {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-ctn {
+  width: auto;
+  background-color: rgba(224, 230, 227, 0.85);
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  padding: 10px 30px 25px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.title-input {
+  width: 300px;
+  background-color: rgb(104, 161, 130);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px;
+}
+.title-input::placeholder {
+  color: rgb(242, 242, 242);
+}
+.description-input {
+  width: 300px;
+  background-color: rgb(250, 247, 225);
+  text-align: start;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  resize: vertical;
+}
+.user-input {
+  width: 300px;
+  background-color: rgb(164, 195, 166);
+  color: rgb(86, 86, 86);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.user-input::placeholder {
+  color: rgb(251, 251, 251);
+}
+.label {
+  align-self: flex-start;
+  position: relative;
+  right: -10px;
+  top: 6px;
+}
+.submit-btn {
+  width: 120px;
+  height: 32px;
+  border-radius: 30px;
+  border: 1px solid black;
+
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.submit-btn:hover {
+  background-color: rgb(104, 161, 130);
+  border: none;
+  color: aliceblue;
+}
+.error {
+  width: 300px;
+  color: rgb(203, 33, 33);
+  background-color: rgba(200, 120, 120, 0.251);
+  border-radius: 10px;
+
+  padding: 10px;
+}
+
+/* detail post page-------------------- */
+.post-page {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+}
+.post-detail {
+  width: 50%;
+}
+.description-detail {
+  height: 400px;
+}
+.title-detail,
+.description-detail,
+.user-detail {
+  width: 100%;
+}
+.user-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.user-detail button {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.15s;
+}
+.user-detail button:hover {
+  background-color: rgb(104, 161, 130);
+  color: white;
+}
+/* --------------------- */
+.comments-ctn {
+  width: 40%;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  /* gap: 40px; */
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.creat-comments {
+  width: 100%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.creat-comments textarea {
+  padding: 6px 8px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid green;
+
+  resize: none;
+}
+.creat-comments button {
+  height: 34px;
+  border-radius: 30px;
+  border: 2px solid rgba(66, 158, 97, 0);
+  background-color: rgb(104, 161, 130);
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.creat-comments button:hover {
+  border-radius: 10px;
+  border: 2px solid rgb(66, 158, 97);
+  background-color: rgba(66, 158, 97, 0);
+  color: rgb(0, 0, 0);
+}
+/* ---------------- */
+.comments {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.comments .comment {
+  width: 100%;
+  border: 1.6px solid green;
+  padding: 10px 10px;
+  border-radius: 10px;
+
+  white-space: normal; /* 自动换行 */
+  word-wrap: break-word; /* 长单词也能换行 */
+  word-break: break-word; /* 兼容性更好 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.comments .comment-user {
+  font-size: 0.85em;
+  color: rgb(113, 131, 125);
+  align-self: flex-end;
+
+  white-space: nowrap;
+  position: relative;
+  top: 7px;
+}
+.comments .del-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid green;
+  color: green;
+  padding: 0;
+  font-size: 12px;
+
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  cursor: pointer;
+}
+.comments .del-btn:hover {
+  background-color: rgb(66, 158, 97);
+  border: 1px solid green;
+  color: white;
+}
+/* page not found---------------- */
+.not-found-page {
+  text-align: center;
+}
+
+.not-found-page .text-link {
+  text-decoration: underline;
+  color: rgb(104, 161, 130);
+  /* background-color: none; */
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.not-found-page .text-link:hover {
+  color: rgb(104, 161, 130);
+  background-color: transparent;
+}
+/* profile-page------------------ */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -20px;
+}
+.postsList-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.basicInfo-ctn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hr {
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+.change-password-btn {
+  width: 130px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.change-password-btn:hover {
+  background-color: rgb(104, 161, 130);
+  border: 1px solid rgba(0, 128, 0, 0);
+  color: white;
+}
+/* change password page----------------- */
+.change-password-ctn {
+  width: 380px;
+  margin: auto;
+  background-color: rgb(250, 247, 225);
+  padding: 40px;
+  padding-top: 10px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.change-password-ctn label {
+  align-self: flex-start;
+}
